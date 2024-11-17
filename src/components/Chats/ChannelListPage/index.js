@@ -155,47 +155,48 @@ const GroupChannelListPage = () => {
   return (
     <>
       <div className="flex gap-4 w-screen h-full">
-        <div></div>
-        <div style={{ display: "flex", marginBottom: "10px" }}>
-          <button
-            onClick={() => handleTabChange("normal")}
-            style={{
-              flex: 1,
-              padding: "10px",
-              background: activeTab === "normal" ? "#007bff" : "#ccc",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Normal Chats
-          </button>
-          <button
-            onClick={() => handleTabChange("archived")}
-            style={{
-              flex: 1,
-              padding: "10px",
-              background: activeTab === "archived" ? "#007bff" : "#ccc",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Archived Chats
-          </button>
-        </div>
+        <div className="flex flex-col gap-3">
+          <div style={{ display: "flex", marginBottom: "10px" }}>
+            <button
+              onClick={() => handleTabChange("normal")}
+              style={{
+                flex: 1,
+                padding: "10px",
+                background: activeTab === "normal" ? "#007bff" : "#ccc",
+                color: "white",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Normal Chats
+            </button>
+            <button
+              onClick={() => handleTabChange("archived")}
+              style={{
+                flex: 1,
+                padding: "10px",
+                background: activeTab === "archived" ? "#007bff" : "#ccc",
+                color: "white",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              Archived Chats
+            </button>
+          </div>
 
-        {/* Conditional rendering based on active tab */}
-        {activeTab === "normal" ? (
-          <GroupChannelList
-            onChannelSelect={handleChannelSelect}
-            onChannelCreated={handleChannelSelect}
-            renderHeader={() => {}}
-            renderUserProfile={(user) => console.log(user, "USER")}
-          />
-        ) : (
-          <ArchivedChannelList onChannelSelect={handleChannelSelect} />
-        )}
+          {/* Conditional rendering based on active tab */}
+          {activeTab === "normal" ? (
+            <GroupChannelList
+              onChannelSelect={handleChannelSelect}
+              onChannelCreated={handleChannelSelect}
+              renderHeader={() => {}}
+              renderUserProfile={(user) => console.log(user, "USER")}
+            />
+          ) : (
+            <ArchivedChannelList onChannelSelect={handleChannelSelect} />
+          )}
+        </div>
 
         {selectedChannelUrl && (
           <div className="relative flex-1">
