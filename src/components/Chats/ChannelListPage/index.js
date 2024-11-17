@@ -190,7 +190,7 @@ const GroupChannelListPage = () => {
           <GroupChannelList
             onChannelSelect={handleChannelSelect}
             onChannelCreated={handleChannelSelect}
-            renderHeader={() => <h3>Normal Chats</h3>}
+            renderHeader={() => {}}
             renderUserProfile={(user) => console.log(user, "USER")}
           />
         ) : (
