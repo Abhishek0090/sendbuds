@@ -9,9 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.1.5",
+    "@sendbird/chat": "^4.15.0",
+    "@sendbird/uikit-react": "^3.15.8",
+    "font-awesome": "^4.7.0",
+    "lucide-react": "^0.456.0",
+    "moment": "^2.30.1",
+    "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "next": "15.0.2"
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.3.0",
+    "sendbird": "^3.1.33",
+    "sendbird-calls": "^1.10.20",
+    "sendbird-uikit": "^2.7.2"
   },
   "devDependencies": {
     "postcss": "^8",
